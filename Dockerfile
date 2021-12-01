@@ -1,5 +1,5 @@
 # Set base image
-FROM node:14
+FROM node:10
 
 # Set working directory for the app in container
 WORKDIR /app
@@ -9,8 +9,8 @@ COPY package* ./
 COPY . ./
 RUN npm install
 
-# Launch application
-CMD ["npm", "run", "start"]
+# Launch application 
+CMD ["npm", "run", "start"] 
 
 # Expose container's port 3002 to the outside
 EXPOSE 3002
