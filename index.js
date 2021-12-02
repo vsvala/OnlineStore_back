@@ -20,7 +20,7 @@ app.get('/api/products', async (req, res) => {
 app.post('/api/orders', async (req,res)=> {
     console.log('posting order to orderservice...')
   try{
-    const response = await axios.post('http//order:3001/api/orders', req)
+    const response = await axios.post('http://order:3001/api/orders', req)
     const body=req.body
     console.log("oorderr responceeee from back ", body)
     return res.status(200).send(res.json(body))
