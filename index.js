@@ -22,9 +22,8 @@ app.post('/api/orders', async (req,res,)=> {
     const body=req.body
   try{
     const response = await axios.post('http://order:3001/api/orders', body)
-    //const body=req.body
-    console.log("oorderr responceeee from back ", body)
-    return res.status(200).send(res.json(body))
+    console.log("oorderr responceeee from orderservise ",response.data)
+    return res.status(200).send(res.json(response.data))
   } catch (error) {
      return { error: 'uups! Could not post order to server' }
    } 
