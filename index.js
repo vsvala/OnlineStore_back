@@ -22,8 +22,18 @@ app.post('/api/orders', async (req,res,)=> {
     const body=req.body
   try{
     const response = await axios.post('http://order:3001/api/orders', body)
-    console.log("oorderr responceeee from orderservise ",response.data)
+    console.log("responce from posting to orderservise ",response.data)
+    if(res.status===200){
     return res.status(200).send(res.json(response.data))
+    }
+    else{
+        console.log("400 responceeee from orderservise ")
+        console.log("400 responceeee from orderservise ",response.data)
+        console.log("400 responceeee from orderservise ")
+        return res.status(400).send(res.json(response.data))
+
+    }
+
   } catch (error) {
      return { error: 'uups! Could not post order to server' }
    } 
@@ -35,6 +45,3 @@ app.listen(PORT, () =>{
     console.log(`Server running on port ${PORT}`)
 
 })
-
-
-
