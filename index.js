@@ -9,6 +9,8 @@ app.use(express.static('public'))
 
 app.use(express.json())
 
+
+//TODO try catch
 app.get('/api/products', async (req, res) => {
     console.log('Requesting products from nginx...')
     const response = await axios.get('http://nginx:9000/api/v1/products')
@@ -33,6 +35,8 @@ app.post('/api/orders', async (req,res,)=> {
   } catch (error) {
     console.log("catch response.status from order",error.response.status)
      return res.status(400).sendStatus(error.response.status)
+     // return res.status(400).send(error.response.status)
+     //TO DO.. to get anwser from orderservise untill front??
    } 
     })
 
