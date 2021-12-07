@@ -26,13 +26,13 @@ app.post('/api/orders', async (req,res,)=> {
     if(res.status===200){
     return res.status(200).send(res.json(response.data))
     }
-    else{
+/*     else{
         console.log("400 responceeee from orderservise ")
         console.log("400 responceeee from orderservise ",response.data)
         console.log("400 responceeee from orderservise ")
         return res.status(400).send(res.json(response.data))
 
-    }
+    } */
 
   } catch (error) {
      return { error: 'uups! Could not post order to server' }
