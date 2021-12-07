@@ -1,7 +1,5 @@
 POST http://localhost:3001/api/orders
 Content-Type: application/json
 
-{"products": [
-    {"name": "towel", "amount": 8, "prise":200}
-    ]
+{
 }
