@@ -1,1 +1,2 @@
-DELETE http://localhost:9000/api/v1/products/1
+DELETE http://localhost:9000/api/v1/products/20
+
