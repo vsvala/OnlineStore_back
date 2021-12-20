@@ -39,7 +39,6 @@ app.post('/api/orders', async (req,res)=> {
   }
   })
 
-  app.use()
 
 const PORT=3002
 app.listen(PORT, () =>{

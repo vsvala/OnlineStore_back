@@ -2,6 +2,6 @@ POST http://localhost:3001/api/orders
 Content-Type: application/json
 
 {"products": [
-    {"name": "towel", "amount": 8, "prise":200}
+    {"name": "candle", "amount": 5, "prise":200}
     ]
 }
